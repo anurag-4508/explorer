@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+.navlist {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.navlogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  padding: 10px;
+  margin-right: 150px;
+}
+.navlist:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+#explore {
+  margin-left: 20px;
+  font-size: 25px;
+}
+.right {
+  text-decoration: none;
+  padding: 20px;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  float: right !important;
+}
+.nav-right {
+  float: right;
+}
+
+.container {
+  background-image: url("others/img (16).jpg");
+  background-color: #cccccc;
+  color: black;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  font-weight: bolder;
+  font-size: 40px;
+}
+#exploreBtn {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+#exploreBtn:hover {
+  margin-top: 20px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+.blog{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(155, 110, 110);
+    padding: 25px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.cont{
+  padding: 2px 16px;
+}
