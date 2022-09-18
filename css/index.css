@@ -9,6 +9,19 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+ 
+/*-------------------- navbar designing---------------------- */
+
+a:link, a:visited {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+/* 
+a:hover, a:active {
+  color: white;
+} */
 .nav {
   display: flex;
   flex-direction: row;
@@ -17,8 +30,8 @@
   overflow: hidden;
 }
 .navlist {
-  text-decoration: none;
-  list-style: none;
+  /* text-decoration: none;
+  list-style: none; */
   font-family: "Poppins", sans-serif;
   font-size: large;
   padding: 20px;
@@ -27,9 +40,7 @@
 }
 .navlogo {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   text-decoration: none;
   list-style: none;
   font-family: "Poppins", sans-serif;
@@ -40,23 +51,18 @@
 .navlist:hover {
   background-color: black;
   color: white;
+}
+.nav .navlist:hover a{
   cursor: pointer;
+  color: white;
 }
-#explore {
-  margin-left: 20px;
-  font-size: 25px;
+
+.logoimg{
+  padding: 0 8px;
 }
-.right {
-  text-decoration: none;
-  padding: 20px;
-  list-style: none;
-  font-family: "Poppins", sans-serif;
-  font-size: large;
-  float: right !important;
-}
-.nav-right {
-  float: right;
-}
+
+/*-------------------- navbar designing---------------------- */
+
 
 .container {
   background-image: url("/others/img\ \(16\).jpg");
