@@ -110,11 +110,16 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background: #7f7fd5;
-  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  /* background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
+  background-image: url('../others/rose-petals.png');
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container1 {
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
