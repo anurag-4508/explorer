@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Varela+Round&display=swap");
+@import url('fonts.css');
+
 
 * {
   margin: 0;
@@ -206,3 +208,219 @@
 }
 
 /* -------x------- Blog Carousel -----x------ */
+
+:root{
+
+  /*      Theme colors        */
+  --text-gray: #3f4954;
+  --text-light : #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
+
+  /* gradient color   */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /*      theme font-family   */
+  --Abel: 'Abel', cursive;
+  --Anton: 'Anton', cursive;
+  --Josefin : 'Josefin', cursive;
+  --Lexend: 'Lexend', cursive;
+  --Livvic : 'Livvic', cursive;
+}
+/* ---------------- Global Classes ---------------*/
+
+a{
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;    
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+h2{
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
+
+h3{
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+button.btn{
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+span{
+  font-family: "Poppins", sans-serif;
+}
+
+.containerBlog{
+  margin: 0 5vw;
+}
+
+.text-gray{
+  color: var(--text-gray);
+}
+
+p{
+  font-family: "Poppins", sans-serif;
+  color: var(--text-light);
+}
+
+/* ------x------- Global Classes -------x-------*/
+
+/* ---------------- Site Content ----------------*/
+
+.site-content{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.post-content{
+  width: 100%;
+  
+}
+
+.site-content .post-content > .post-image, .post-title{
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* .site-content .post-content > .post-image .post-info{
+  background: var(--sky);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0%;
+  left: 20vw;
+  border-radius: 3rem;
+} */
+
+.site-content .post-content > .post-image > div{
+  overflow: hidden;
+}
+
+.site-content .post-content > .post-image .img{
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.site-content .post-content > .post-image .img:hover{
+  transform: scale(1.3);
+}
+
+.site-content .post-content > .post-image .post-info span{
+  margin: 0 .5rem;
+}
+
+.post-content .post-title a{
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.site-content .post-content .post-title .post-btn{
+  border-radius: 0;
+  padding: .7rem 1.5rem;
+  background: var(--sky);
+}
+
+.site-content .pagination{
+  justify-content: center;
+  color: var(--text-gray);
+  margin: 4rem 0;
+}
+
+.site-content .pagination a{
+  padding: .6rem .9rem;
+  border-radius: 2rem;
+  margin: 0 .3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.site-content .pagination .pages{
+  background: var(--text-gray);
+  color: var(--white);
+}
+
+.category{
+  background-color: white;
+  color: black;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.list-items{
+  border-radius: 10px;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.list-items:hover{
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+}
+.popular-post{
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+.newsletter{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 15px;
+}
+.email{
+  border: 0.5px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.newsletter-form-element{
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.newsletterBtn{
+  margin-top: 5px;
+  border: 0.5px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+.newsletterBtn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+/* -------x-------- Site Content --------x-------*/
