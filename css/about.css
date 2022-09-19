@@ -10,7 +10,9 @@
 }
  
 /*-------------------- navbar designing---------------------- */
-
+body{
+  background-color: rgb(219, 245, 248);
+}
 a:link, a:visited {
   color: black;
   text-align: center;
@@ -28,6 +30,7 @@ a:hover, a:active {
   /* border-bottom: 1px solid black; */
   overflow: hidden;
   border-bottom: 1px solid black;
+  background-color: white;
 }
 .navlist {
   /* text-decoration: none;
@@ -62,3 +65,29 @@ a:hover, a:active {
 }
 
 /*-------------------- navbar designing---------------------- */
+
+/*-----------------------Container designing-------------------*/
+.container{
+  /* background-color: white; */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 10px 10px 5px 2px rgb(153, 153, 153);
+  transition: background-color 0.5s ease-in;
+}
+.container:hover{
+  box-shadow: 10px 10px 5px 5px rgb(153, 153, 153);
+  background-color: white;
+}
+.about{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
