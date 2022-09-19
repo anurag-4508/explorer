@@ -318,9 +318,14 @@ p {
   background-color: rgb(250, 250, 250);
 }
 
-.site-content .post-content>.post-image,
-.post-title {
-  padding: 1rem 2rem;
+.post-image {
+  padding: 2rem;
+  padding-bottom: 0rem;
+  position: relative;
+}
+
+.site-content .post-content>.post-title {
+  padding: 0.5rem 2rem 1rem 2rem;
   position: relative;
 }
 
@@ -393,6 +398,7 @@ p {
 
 .list-items {
   border-radius: 10px;
+  border: 1px solid white;
   margin: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -407,25 +413,25 @@ p {
 
 .popular-post {
   border: 1px solid black;
-  margin: 15px;
+  margin: 30px 15px;
   padding: 15px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-
 }
 
 .newsletter {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  margin: 15px;
   padding: 15px;
   border-radius: 15px;
 }
 
 .email {
   border: 0.5px solid black;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 10px;
 
 }
