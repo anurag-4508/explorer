@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            position:relative;
+            background-color: rgb(219,245,248);
+        }
+        
+        
+      .container{
+        font-family:'Lucida Sans';
+        border:1px solid grey;
+        width:800px;
+        height:500px;
+        border-radius: 10px;
+        position:absolute;
+        top:80px;
+        color:black;
+        background-color: #f2f2f2;
+        box-shadow:5px 5px grey;
+        
+      }
+      
+      .box{
+        margin:50px 95px 0px 95px;
+       float:left;
+      }
+     
+      #item1,#item2,#item3,#item4{
+        margin: 10px 0px;
+      }
+     
+      .inp{
+          width:210px;
+          height:25px;
+          border: 1px solid grey;
+          border-radius:4px;
+          
+      }
+      img{
+        height: 100px;
+        margin: 0px 0px 7px 52px;
+      }
+      #item3{
+        width:210px;
+        height: 40px;
+        border:1px;
+        border-radius: 10px;
+        background-color: skyblue;
+      }
+      #exp{
+        margin:0px 0px 0px 65px;
+      }
+      #h2{
+        margin:30px 0px;
+      }
+      /* a{
+        text-decoration: none;
+        color:green;
+        font-weight: bold;
+      } */
+      #compass{
+        height:150px;
+        margin:60px 20px 20px 105px;
+      }
+      #head{
+        margin:0px 10px 10px 421px;
+      }
+      .content{
+        margin: 13px 10px 10px 425px;
+      }
+      .content h3{
+        margin:10px 0px 0px 0px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src=".\undraw_male_avatar_323b.svg" alt="avatar">
+            <h3 id="exp">Sign Up</h3>
+            <div id="item1">Enter username</div>
+            <input type="text" class="inp">
+            <div id="item4">
+                Enter Email-id
+            </div>
+            <input type="text" class="inp">
+            <div id="item2">Enter Password</div>
+            <input type="password" class="inp">
+            <div>
+                <button id="item3">Sign Up</button>
+            </div>
+            <!-- <div id="item4">New User?<a href="#">Create Account</a></div> -->
+        </div>
+        <div class="logo">
+            <img src=".\compass-with-white-needles.png" alt="logo" id="compass">
+            <h1 id="head">Welcome to Explorer</h1>
+            <div class="content">
+                <h3>Create an account to get following benefits </h3>
+                <ul>
+                    <li>Write your own blogs.</li>
+                    <li>Like and comment on blogs.</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
