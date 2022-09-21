@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/others/logo.png" />
+    <title>Explorer - Login in</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Varela+Round&display=swap");
+      @import url("fonts.css");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background-color: rgb(219, 245, 248);
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
+      }
+
+      /*----------------------------navbar css--------------------------------------------*/
+      body {
+        background-color: rgb(219, 245, 248);
+      }
+      a:link,
+      a:visited {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        /* display: inline-block; */
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        border-bottom: 1px solid black;
+        background-color: white;
+      }
+      .navlist {
+        font-family: "Poppins", sans-serif;
+        font-size: large;
+        padding: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+      .navlogo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        list-style: none;
+        font-family: "Poppins", sans-serif;
+        font-size: large;
+        padding: 10px;
+        margin-right: 150px;
+      }
+      .navlist:hover {
+        background-color: black;
+        color: white;
+      }
+      .nav .navlist:hover a {
+        cursor: pointer;
+        color: white;
+      }
+
+      .logoimg {
+        padding: 0 8px;
+      }
+      /*------------------------navbar css------------------------------------*/
+      .container {
+        font-family: "Lucida Sans";
+        border: 1px solid grey;
+        width: 800px;
+        height: 600px;
+        border-radius: 10px;
+        position: absolute;
+        color: black;
+        background-color: #f2f2f2;
+        box-shadow: 5px 5px grey;
+      }
+
+      .box {
+        margin: 50px 95px 0px 95px;
+        float: left;
+      }
+
+      #item1,
+      #item2,
+      #item3,
+      #item4 {
+        margin: 10px 0px;
+      }
+
+      .inp {
+        width: 210px;
+        height: 25px;
+        border: 1px solid grey;
+        border-radius: 4px;
+      }
+
+      #avatar {
+        height: 100px;
+        margin: 0px 0px 7px 52px;
+      }
+
+      #item3 {
+        width: 210px;
+        height: 40px;
+        border: 1px;
+        border-radius: 10px;
+        background-color: skyblue;
+      }
+
+      #exp {
+        margin: 0px 0px 0px 14px;
+      }
+
+      #h2 {
+        margin: 30px 0px;
+      }
+
+      #creatAccount {
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+      }
+
+      #compass {
+        height: 150px;
+        margin: 60px 20px 20px 40px;
+      }
+
+      #head {
+        margin: 0px 10px 10px 421px;
+      }
+
+      .content {
+        margin: 13px 10px 10px 425px;
+      }
+      #item3:hover {
+        cursor: pointer;
+        background-color: rgb(59, 178, 247);
+      }
+      #loginAccount {
+        color: blue;
+      }
+      .ul li {
+        margin: 10px;
+      }
+
+      /* The alert message box */
+      .alert {
+        padding: 20px;
+        background-color: #f44336; /* Red */
+        color: white;
+        margin-bottom: 15px;
+      }
+      .success {
+        padding: 20px;
+        background-color: #f44336; /* Red */
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      /* The close button */
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* When moving the mouse over the close button */
+      .closebtn:hover {
+        color: black;
+      }
+
+      .message {
+        margin: 5px;
+      }
+
+      .message li {
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <ul class="nav">
+        <div class="navlogo">
+          <img
+            src="/others/logo.png"
+            alt="image"
+            height="40px"
+            width="40px"
+            class="logoimg"
+          />
+          Explorer
+        </div>
+        <div class="navlist"><a href="/">Home</a></div>
+        <div class="navlist"><a href="/about">About</a></div>
+        <div class="navlist"><a href="/contact">Contact Us</a></div>
+        <div class="navlist" id="loginlink">
+          <a href="/users/login">Login</a>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="message">
+      <!-- alert message -->
+      <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+      <div class="alert">
+        <span
+          class="closebtn"
+          onclick="this.parentElement.style.display='none';"
+          >&times;</span
+        >
+        <ul>
+          <li><%= error.message %></li>
+        </ul>
+      </div>
+      <% }) %> <% } %>
+      <!-- alert message -->
+    </div>
+
+    <section class="section">
+      <form class="container" method="POST" action="/users/register">
+        <div class="box">
+          <img
+            src="/others/undraw_male_avatar_323b.svg"
+            id="avatar"
+            alt="avatar"
+          />
+          <h3 id="exp">Sign up to Explorer</h3>
+          <div id="item1">Enter username</div>
+          <input type="text" class="inp" id="name" name="name" />
+          <div id="item1">Enter Email-id</div>
+          <input type="text" class="inp" id="email" name="email" />
+          <div id="item2">Enter Password</div>
+          <input type="password" class="inp" id="password" name="password" />
+          <div id="item2">Confirm Password</div>
+          <input type="password" class="inp" id="password2" name="password2" />
+          <div>
+            <button id="item3" class="SignBtn" type="submit">Sign up</button>
+          </div>
+          <div id="item4">
+            Already have a account?<a href="/users/login" id="loginAccount">
+              Login Account</a
+            >
+          </div>
+        </div>
+        <div class="logo">
+          <img src="/others/logo.png" alt="logo" id="compass" />
+          <h1 id="head">Welcome to Explorer</h1>
+          <div class="content">
+            <h3>Create account to get following benefits</h3>
+            <ul class="ul">
+              <li>Write your own blogs.</li>
+              <li>Like and comment on blogs.</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

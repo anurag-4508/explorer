@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Varela+Round&display=swap");
+@import url('fonts.css');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*-------------------- navbar designing---------------------- */
+
+a:link,
+a:visited {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* 
+a:hover, a:active {
+  color: white;
+} */
+.nav {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  /* border-bottom: 1px solid black; */
+  overflow: hidden;
+}
+
+.navlist {
+  /* text-decoration: none;
+  list-style: none; */
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.navlogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  padding: 10px;
+  margin-right: 150px;
+}
+
+.navlist:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav .navlist:hover a {
+  cursor: pointer;
+  color: white;
+}
+
+.logoimg {
+  padding: 0 8px;
+}
+
+/*-------------------- navbar designing---------------------- */
+
+
+.container {
+  background-image: url("/others/img\ \(16\).jpg");
+  background-color: #cccccc;
+  color: black;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+#exploreBtn {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+#exploreBtn:hover {
+  margin-top: 20px;
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+
+/* --------------- Blog Carousel ------------ */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+.main {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /* background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
+  background-image: url('../others/rose-petals.png');
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: auto;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+#Cardimg {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 1em;
+  font-size: 0.75rem;
+}
+
+.tag+.tag {
+  margin-left: 0.5em;
+}
+
+.tag-blue {
+  background: #56ccf2;
+  background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #d1913c;
+  background: linear-gradient(to bottom, #ffd194, #d1913c);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+  background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info>small {
+  color: #666;
+}
+
+/* -------x------- Blog Carousel -----x------ */
+
+:root {
+
+  /*      Theme colors        */
+  --text-gray: #3f4954;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
+
+  /* gradient color   */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /*      theme font-family   */
+  --Abel: 'Abel', cursive;
+  --Anton: 'Anton', cursive;
+  --Josefin: 'Josefin', cursive;
+  --Lexend: 'Lexend', cursive;
+  --Livvic: 'Livvic', cursive;
+}
+
+/* ---------------- Global Classes ---------------*/
+
+a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+.containerBlog {
+  margin: 0 5vw;
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-light);
+}
+
+/* ------x------- Global Classes -------x-------*/
+
+/* ---------------- Site Content ----------------*/
+
+.site-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.post-content {
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+}
+
+.post-image {
+  padding: 2rem;
+  padding-bottom: 0rem;
+  position: relative;
+}
+
+.site-content .post-content>.post-title {
+  padding: 0.5rem 2rem 1rem 2rem;
+  position: relative;
+}
+
+/* .site-content .post-content > .post-image .post-info{
+  background: var(--sky);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0%;
+  left: 20vw;
+  border-radius: 3rem;
+} */
+
+.site-content .post-content>.post-image>div {
+  overflow: hidden;
+}
+
+.site-content .post-content>.post-image .img {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.site-content .post-content>.post-image .img:hover {
+  transform: scale(1.3);
+}
+
+.site-content .post-content>.post-image .post-info span {
+  margin: 0 .5rem;
+}
+
+.post-content .post-title a {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.site-content .post-content .post-title .post-btn {
+  border-radius: 0;
+  padding: .7rem 1.5rem;
+  background: var(--sky);
+}
+
+.site-content .pagination {
+  justify-content: center;
+  color: var(--text-gray);
+  margin: 4rem 0;
+}
+
+.site-content .pagination a {
+  padding: .6rem .9rem;
+  border-radius: 2rem;
+  margin: 0 .3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.site-content .pagination .pages {
+  background: var(--text-gray);
+  color: var(--white);
+}
+
+.category {
+  background-color: white;
+  color: black;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-items {
+  border-radius: 10px;
+  border: 1px solid white;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.list-items:hover {
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+}
+
+.popular-post {
+  border: 1px solid black;
+  margin: 30px 15px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.email {
+  border: 0.5px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+
+}
+
+.newsletter-form-element {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.newsletterBtn {
+  margin-top: 5px;
+  border: 0.5px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.newsletterBtn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.blogContain {
+  margin-top: 15px;
+}
+
+/* -------x-------- Site Content --------x-------*/
