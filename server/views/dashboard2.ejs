@@ -27,6 +27,52 @@
 	  .content-head{
 		margin-bottom: 20px;
 	  }
+
+    #writeBtn{
+      text-decoration: none;
+      
+    }
+
+
+    /* alert css */
+          /* The alert message box */
+          .alert {
+        padding: 20px;
+        background-color: #f44336; /* Red */
+        color: white;
+        margin-bottom: 15px;
+      }
+      .success {
+        padding: 20px;
+        background-color: #f44336; /* Red */
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      /* The close button */
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* When moving the mouse over the close button */
+      .closebtn:hover {
+        color: black;
+      }
+
+      .message {
+        margin: 5px;
+      }
+
+      .message li {
+        list-style: none;
+      }
     </style>
   </head>
   <body>
@@ -65,6 +111,55 @@
         </div>
       </aside>
 
+      <div class="message">
+        <!-- logout message -->
+        <% if(messages.success_msg) { %>
+        <div class="alert">
+          <span
+            class="closebtn"
+            onclick="this.parentElement.style.display='none';"
+            >&times;</span
+          >
+          <ul>
+            <li><%= messages.success_msg %></li>
+          </ul>
+        </div>
+        <% } %>
+        <!-- logout message -->
+  
+        <!-- error message -->
+        <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+        <div class="alert">
+          <span
+            class="closebtn"
+            onclick="this.parentElement.style.display='none';"
+            >&times;</span
+          >
+          <ul>
+            <li><%= error.message %></li>
+          </ul>
+        </div>
+        <% }) %> <% } %>
+        <!-- error message -->
+  
+        <!-- error message 2 -->
+        <% if (messages.error) { %>
+        <div class="alert">
+          <span
+            class="closebtn"
+            onclick="this.parentElement.style.display='none';"
+            >&times;</span
+          >
+          <ul>
+            <li><%= messages.error %></li>
+          </ul>
+        </div>
+        <% } %>
+        <!-- error message 2 -->
+      </div>
+
+
+      
       <header class="menu-wrap">
         <figure class="user">
           <div class="user-avatar">
@@ -147,12 +242,17 @@
         </nav>
       </header>
 
+
+      
+
+
       <main class="content-wrap">
         <header class="content-head">
           <h1>Dashboard</h1>
 
           <div class="action">
-            <button>Write Blog</button>
+            
+            <button type="submit"> <a href="/users/writeblog" id="writeBtn">Write Blog</a> </button>
           </div>
         </header>
 
@@ -568,6 +668,8 @@
           </section>
         </div>
       </main>
+
+      
     </div>
   </body>
 </html>

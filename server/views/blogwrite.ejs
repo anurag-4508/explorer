@@ -80,21 +80,31 @@
 
     
     <div class="container">
-      <form action="action_page.php">
+      <form action="/users/publishBlog" method="post">
         <label for="fname">Author Name</label>
         <input
           type="text"
           id="fname"
-          name="firstname"
+          name="name"
           placeholder="<%= user %>"
           disabled
         />
 
-        <label for="email">Blog Title</label>
+        <label for="fname">Email</label>
         <input
-          type="email"
-          id="email"
-          name="email"
+          type="text"
+          id="fname"
+          name="name"
+          placeholder="<%= email %>"
+          disabled
+        />
+
+
+        <label for="blogtitle">Blog Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
           placeholder="Enter a fascinating blog title.."
         />
         <label for="avatar">Choose a blog picture:</label><br/>
@@ -102,13 +112,13 @@
 
         <label for="subject" id="BlogLabel">Blog</label>
         <textarea
-          id="subject"
-          name="subject"
+          id="blog"
+          name="blog"
           placeholder="Express your creativity here.."
           style="height: 200px"
         ></textarea>
 
-        <input type="submit" value="Publish" />
+        <input type="submit" value="Publish"/>
       </form>
     </div>
   </body>

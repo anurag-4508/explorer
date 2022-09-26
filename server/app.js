@@ -1,6 +1,6 @@
 // const express = require("express")
 // const fs = require("fs")
-const path = require("path")
+const path = require("path");
 
 // const app = express();
 // const port=80  //default port
@@ -24,17 +24,17 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 require("dotenv").config();
-const app = express();  
+const app = express();
 
 const PORT = process.env.PORT || 80;
 
 const initializePassport = require("./passportConfig");
 
 //defines path of views folder where html files are stored
-const finalPath = path.join(__dirname,"../")
+const finalPath = path.join(__dirname, "../");
 
 // built in middle ware for serving static webpages
-app.use(express.static(finalPath))
+app.use(express.static(finalPath));
 
 initializePassport(passport);
 
@@ -42,7 +42,7 @@ initializePassport(passport);
 
 // Parses details from a form
 app.use(express.urlencoded({ extended: false }));
-app.set("view engine","ejs");
+app.set("view engine", "ejs");
 
 app.use(
   session({
@@ -144,14 +144,18 @@ app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
   res.render("dashboard2", { user: req.user.name });
 });
 
+app.get("/users/writeblog", checkNotAuthenticated, (req, res) => {
+  console.log(req.isAuthenticated());
+  res.render("blogwrite", { user: req.user.name ,email:req.user.email});
+});
+
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
 
-
 app.get("/contact", (req, res) => {
-    res.render("contact.ejs");
-  });
+  res.render("contact.ejs");
+});
 
 app.get("/users/logout", (req, res) => {
   req.logout(function (err) {
@@ -179,4 +183,38 @@ function checkNotAuthenticated(req, res, next) {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+// Working on blog backend
+
+app.post("/users/publishBlog", async (req, res) => {
+  let { title, blog } = req.body;
+
+  // let errors = [];
+
+  // `SELECT * FROM users WHERE email = $1`,
+  // [email],
+  // (err, results) => {
+  //   if (err) {
+  //     console.log(err);
+  //   }
+  //   console.log(results.rows);
+  //   if (results.rows.length > 0) {
+  //     errors.push({ message: "Email already registered" });
+  //     res.render("signuppage.ejs", { errors });
+
+  pool.query(
+    `INSERT INTO blogDetails (title, blog)
+                    VALUES ($1, $2)
+                    RETURNING title, blog`,
+    [title, blog],
+    (err, results) => {
+      if (err) {
+        throw err;
+      }
+      console.log(results.rows);
+      req.flash("success_msg", "Hurray!! Your blog is published");
+      res.redirect("/users/dashboard");
+    }
+  );
 });
