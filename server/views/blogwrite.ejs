@@ -20,8 +20,13 @@
         font-family: "Poppins", sans-serif;
         scroll-behavior: smooth;
       }
+
+      html {
+        /* overflow-y: scroll; */
+      }
       body {
         background-color: rgb(219, 245, 248);
+        /* position: absolute; */
       }
 
       /* Style inputs with type="text", select elements and textareas */
@@ -71,14 +76,12 @@
         border: thin solid grey;
         border-radius: 3px;
       }
-      #BlogLabel{
+      #BlogLabel {
         margin-top: 100px;
       }
     </style>
   </head>
   <body>
-
-    
     <div class="container">
       <form action="/users/publishBlog" method="post">
         <label for="fname">Author Name</label>
@@ -99,7 +102,6 @@
           disabled
         />
 
-
         <label for="blogtitle">Blog Title</label>
         <input
           type="text"
@@ -107,8 +109,12 @@
           name="title"
           placeholder="Enter a fascinating blog title.."
         />
-        <label for="avatar">Choose a blog picture:</label><br/>
-        <input type="file" name="avatar" accept="image/png, image/jpeg" /><br/><br/>
+        <!-- <label for="avatar">Choose a blog picture:</label><br />
+        <input
+          type="file"
+          name="avatar"
+          accept="image/png, image/jpeg"
+        /><br /><br /> -->
 
         <label for="subject" id="BlogLabel">Blog</label>
         <textarea
@@ -118,7 +124,7 @@
           style="height: 200px"
         ></textarea>
 
-        <input type="submit" value="Publish"/>
+        <input type="submit" value="Publish" />
       </form>
     </div>
   </body>

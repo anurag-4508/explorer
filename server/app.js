@@ -63,6 +63,7 @@ app.use(flash());
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
+  
 });
 
 app.get("/users/register", checkAuthenticated, (req, res) => {
@@ -192,22 +193,29 @@ app.post("/users/publishBlog", async (req, res) => {
 
   // let errors = [];
 
-  // `SELECT * FROM users WHERE email = $1`,
+  // `SELECT email FROM users WHERE email = $1`,
   // [email],
   // (err, results) => {
   //   if (err) {
   //     console.log(err);
   //   }
-  //   console.log(results.rows);
-  //   if (results.rows.length > 0) {
-  //     errors.push({ message: "Email already registered" });
-  //     res.render("signuppage.ejs", { errors });
+  //   console.log(results.rows.email);
+  // }
 
+  // let date =new date();
+  let today = new Date();
+  let a= today.getDate();
+  let b = today.getMonth();
+  let c = today.getFullYear();
+  let current = a+"/"+b+"/"+c;
+  
+
+  
   pool.query(
-    `INSERT INTO blogDetails (title, blog)
-                    VALUES ($1, $2)
-                    RETURNING title, blog`,
-    [title, blog],
+    `INSERT INTO blogDetails (title, blog,datetime)
+                    VALUES ($1, $2,$3)
+                    RETURNING title, blog,datetime`,
+    [title, blog,current],
     (err, results) => {
       if (err) {
         throw err;
@@ -218,3 +226,47 @@ app.post("/users/publishBlog", async (req, res) => {
     }
   );
 });
+
+
+
+//WORKING ON PUBLISHING BLOG ON HOME PAGE
+
+// app.post("/users/publishBlog", async (req, res) => {
+//   let { title, blog } = req.body;
+
+//   // let errors = [];
+
+//   // `SELECT email FROM users WHERE email = $1`,
+//   // [email],
+//   // (err, results) => {
+//   //   if (err) {
+//   //     console.log(err);
+//   //   }
+//   //   console.log(results.rows.email);
+//   // }
+
+//   // let date =new date();
+//   let today = new Date();
+//   let a= today.getDate();
+//   let b = today.getMonth();
+//   let c = today.getFullYear();
+//   let current = a+"/"+b+"/"+c;
+  
+
+  
+//   pool.query(
+//     `INSERT INTO blogDetails (title, blog,datetime)
+//                     VALUES ($1, $2,$3)
+//                     RETURNING title, blog,datetime`,
+//     [title, blog,current],
+//     (err, results) => {
+//       if (err) {
+//         throw err;
+//       }
+//       console.log(results.rows);
+//       req.flash("success_msg", "Hurray!! Your blog is published");
+//       res.redirect("/users/dashboard");
+//     }
+//   );
+// });
+

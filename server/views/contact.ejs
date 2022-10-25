@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/css/contact.css"> -->
-    <link href="../../public/css/contact.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- <link rel="stylesheet" href="/css/contact.css"> -->
+<!-- <link href="../../public/css/contact.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/others/logo.png">
     <title>Explorer - Contact Us</title>
 </head>
@@ -57,4 +57,461 @@
 
       </div>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Poppins&family=Varela+Round&display=swap");
+    @import url('fonts.css');
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+      font-size: 12px;
+    }
+
+    body,
+    button,
+    input {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    .background {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /*-------------------- navbar designing---------------------- */
+
+    a:link,
+    a:visited {
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* 
+a:hover, a:active {
+  color: white;
+} */
+    .nav {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-around; */
+      /* border-bottom: 1px solid black; */
+      overflow: hidden;
+      border-bottom: 1px solid black;
+    }
+
+    .navlist {
+      /* text-decoration: none;
+  list-style: none; */
+      font-family: "Poppins", sans-serif;
+      font-size: large;
+      padding: 20px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .navlogo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      list-style: none;
+      font-family: "Poppins", sans-serif;
+      font-size: large;
+      padding: 10px;
+      margin-right: 150px;
+    }
+
+    .navlist:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .nav .navlist:hover a {
+      cursor: pointer;
+      color: white;
+    }
+
+    .logoimg {
+      padding: 0 8px;
+    }
+
+    /*-------------------- navbar designing---------------------- */
+
+    .info {
+      font-size: 15px;
+      margin-top: 15px;
+      color: #ed1c6f;
+    }
+
+    .container {
+      flex: 0 1 700px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .screen {
+      position: relative;
+      background: #3e3e3e;
+      border-radius: 15px;
+    }
+
+    .screen:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+      z-index: -1;
+    }
+
+    .screen-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: #4d4d4f;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .screen-header-left {
+      margin-right: auto;
+    }
+
+    .screen-header-button {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 3px;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .screen-header-button.close {
+      background: #ed1c6f;
+    }
+
+    .screen-header-button.maximize {
+      background: #e8e925;
+    }
+
+    .screen-header-button.minimize {
+      background: #74c54f;
+    }
+
+    .screen-header-right {
+      display: flex;
+    }
+
+    .screen-header-ellipsis {
+      width: 3px;
+      height: 3px;
+      margin-left: 2px;
+      border-radius: 8px;
+      background: #999;
+    }
+
+    .screen-body {
+      display: flex;
+    }
+
+    .screen-body-item {
+      flex: 1;
+      padding: 50px;
+    }
+
+    .screen-body-item.left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .app-title {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      color: #ea1d6f;
+      font-size: 26px;
+    }
+
+    .app-title:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 25px;
+      height: 4px;
+      background: #ea1d6f;
+    }
+
+    .app-contact {
+      margin-top: auto;
+      font-size: 8px;
+      color: #888;
+    }
+
+    .app-form-group {
+      margin-bottom: 15px;
+    }
+
+    .app-form-group.message {
+      margin-top: 40px;
+    }
+
+    .app-form-group.buttons {
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    .app-form-control {
+      width: 100%;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #666;
+      color: #ddd;
+      font-size: 14px;
+      text-transform: uppercase;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .app-form-control-menu {
+      width: 100%;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #666;
+      color: #ddd;
+      font-size: 14px;
+      text-transform: uppercase;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .app-form-control::placeholder {
+      color: #666;
+    }
+
+    .app-form-control:focus {
+      border-bottom-color: #ddd;
+    }
+
+    .app-form-button {
+      background: none;
+      border: none;
+      color: #ea1d6f;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .app-form-button:hover {
+      color: #b9134f;
+    }
+
+    .credits {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      color: #ffa4bd;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .credits-link {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .dribbble {
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+    }
+
+    @media screen and (max-width: 520px) {
+      .screen-body {
+        flex-direction: column;
+      }
+
+      .screen-body-item.left {
+        margin-bottom: 30px;
+      }
+
+      .app-title {
+        flex-direction: row;
+      }
+
+      .app-title span {
+        margin-right: 12px;
+      }
+
+      .app-title:after {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .screen-body {
+        padding: 40px;
+      }
+
+      .screen-body-item {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+
+<body onload="load()">
+  <nav class="navbar">
+    <ul class="nav">
+      <div class="navlogo">
+        <img src="/others/logo.png" alt="image" height="40px" width="40px" class="logoimg" />
+        Explorer
+      </div>
+      <div class="navlist"><a href="/">Home</a></div>
+      <div class="navlist"><a href="/about">About</a></div>
+      <div class="navlist"><a href="#">Contact Us</a></div>
+      <div class="navlist" id="loginlink"><a href="/users/login">Login</a></div>
+    </ul>
+  </nav>
+  <div class="background">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>CONTACT</span>
+              <span>US</span>
+            </div>
+            <div class="info">
+
+              <p>After writing all fields click on save, then reload the page. You will get stored values</p>
+            </div>
+            <div class="app-contact">CONTACT INFO : +91 123987544</div>
+          </div>
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="NAME" id="name">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="EMAIL" id="email">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="CONTACT NO" id="contact">
+              </div>
+             
+              <div class="app-form-group message">
+                <input class="app-form-control" placeholder="MESSAGE" id="message">
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button" id="save_btn" type="submit" onclick="save()">SEND</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script>
+
+  function save() {
+    var name = document.getElementById('name').value;
+    localStorage.setItem('name', name);
+
+    var email = document.getElementById('email').value;
+    localStorage.setItem('email', email);
+
+    var contact = document.getElementById('contact').value;
+    localStorage.setItem('contact', contact);
+
+    var message = document.getElementById('message').value;
+    localStorage.setItem('message', message);
+
+    var country = document.getElementById('country').value;
+    localStorage.setItem('country', country);
+  }
+
+
+  function load() {
+    var name = localStorage.getItem('name');
+    var email = localStorage.getItem('email');
+    var country = localStorage.getItem('country');
+    var contact = localStorage.getItem('contact');
+    var message = localStorage.getItem('message');
+
+    if (name) {
+      document.getElementById('name').value = name;
+    } if (email) {
+      document.getElementById('email').value = email;
+    } if (contact) {
+      document.getElementById('contact').value = contact;
+    } if (country) {
+      document.getElementById('country').value = country;
+    } if (message) {
+      document.getElementById('message').value = message;
+    }
+  }
+
+
+  reset_btn.onclick = function () {
+    localStorage.clear();
+  }
+</script>
+
 </html>
